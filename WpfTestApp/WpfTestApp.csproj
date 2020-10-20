@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Repositories\AssortmentRepository.cs" />
     <Compile Include="Repositories\PriceRepository.cs" />

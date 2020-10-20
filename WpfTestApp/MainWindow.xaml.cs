@@ -71,17 +71,13 @@ namespace WpfTestApp
 
         private void OnDoubleClick(object sender, RoutedEventArgs e)
         {
-            var item = assortmentGrid.SelectedValue as Item;       
-            PriceView view = new PriceView();
-            view.ViewModel = new PriceViewModel
+            var item = assortmentGrid.SelectedValue as Item;
+            PriceView view = new PriceView(new PriceViewModel
             {
                 Id = item.Id,
                 Price = item.Price
-            };
+            });
             view.Show();
-
-
-
         }
     }
 }

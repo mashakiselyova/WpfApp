@@ -4,17 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTestApp.Views"
+        xmlns:viewmodel="clr-namespace:WpfTestApp.ViewModels"
         mc:Ignorable="d"
-        Title="Price" Height="450" Width="800"
-        Loaded="OnLoad">
+        Title="Price" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="120"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Content="-1" Width="50" Height="20" Grid.Column="0" VerticalAlignment="Top" Click="SubtractOne"/>
-        <TextBlock x:Name="price" Grid.Column="1" HorizontalAlignment="Center"></TextBlock>
-        <Button Content="+1" Width="50" Height="20" Grid.Column="2" VerticalAlignment="Top" Click="AddOne"/>
+        <Button Command="{Binding SubtractCommand}" Content="-1" Width="50" Height="20" Grid.Column="0" VerticalAlignment="Top" />
+        <TextBlock x:Name="price" Text="{Binding Price}" Grid.Column="1" HorizontalAlignment="Center"></TextBlock>
+        <Button Command="{Binding AddCommand}" Content="+1" Width="50" Height="20" Grid.Column="2" VerticalAlignment="Top" />
     </Grid>
 </Window>
